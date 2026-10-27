@@ -69,3 +69,28 @@ footer{text-align:center;padding:42px 20px 48px;background:#fffaf9;color:#a98a91
 @keyframes burst{0%{transform:translate(0,0) scale(.5);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1.4) rotate(25deg);opacity:0}}
 @media(max-width:700px){.hero{min-height:650px;padding-top:22px}.hero-content{margin-top:100px}.topline{font-size:8px}.hero-sticker{width:82px;height:82px;font-size:9px}.sticker-one{left:4%;top:27%}.sticker-two{right:4%;bottom:9%}.hero-orbit{opacity:.55}.section{padding:76px 20px}.gallery{grid-template-columns:1fr 1fr;gap:12px}.photo-tall{grid-column:1/-1}.photo-card img,.photo-placeholder{height:190px}.photo-tall img,.photo-tall .photo-placeholder{height:260px}.gallery .photo-tall figcaption{margin-bottom:4px}.day-card{padding:32px 18px 24px}.letter-inner{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+```css
+/* 修复情书隐藏状态 */
+.letter-message[hidden] {
+  display: none !important;
+}
+
+/* 打开信封时的动画 */
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+
+.envelope.open .letter-paper {
+  transform: translateY(-76px);
+}
+
+.envelope.open .envelope-seal {
+  opacity: 0;
+}
+
+/* 让信封按钮不出现多余的焦点边框 */
+.envelope-wrap {
+  -webkit-tap-highlight-color: transparent;
+}
+```
