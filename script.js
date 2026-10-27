@@ -1,3 +1,4 @@
+```javascript
 // 恋爱开始日期：2026年7月3日
 const startDate = new Date(2026, 6, 3);
 
@@ -21,25 +22,38 @@ function updateLoveDays() {
   }
 }
 
-updateLoveDays();
 // 情书打开和收起
-document.addEventListener("DOMContentLoaded", function () {
+function setupLetter() {
   const openBtn = document.getElementById("openLetter");
   const closeBtn = document.getElementById("closeLetter");
   const message = document.getElementById("letterMessage");
   const envelope = document.getElementById("envelope");
 
-  if (openBtn && message) {
+  if (openBtn && message && !openBtn.dataset.bound) {
+    openBtn.dataset.bound = "true";
     openBtn.addEventListener("click", function () {
       message.hidden = false;
       if (envelope) envelope.classList.add("opened");
     });
   }
 
-  if (closeBtn && message) {
+  if (closeBtn && message && !closeBtn.dataset.bound) {
+    closeBtn.dataset.bound = "true";
     closeBtn.addEventListener("click", function () {
       message.hidden = true;
       if (envelope) envelope.classList.remove("opened");
     });
   }
-});
+}
+
+function initPage() {
+  updateLoveDays();
+  setupLetter();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPage);
+} else {
+  initPage();
+}
+```
