@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f5">
+  <title>写给我们的小小宇宙 ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span>
+  </div>
+
+  <header class="hero">
+    <div class="topline"><span>OUR LITTLE UNIVERSE</span><span>♡ JUST FOR YOU</span></div>
+    <div class="hero-content">
+      <p class="eyebrow">给世界上特别的你</p>
+      <h1>和你在一起的<br><em>每一天</em>，都值得纪念。</h1>
+      <p class="subtitle">生活很大，宇宙很远，但我最喜欢的地方，是有你的身边。</p>
+      <a class="pill-button" href="#our-days">看看我们的故事 <span>↓</span></a>
+    </div>
+    <div class="hero-sticker sticker-one">my favorite<br>person ♡</div>
+    <div class="hero-sticker sticker-two">little moments<br>big love</div>
+    <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+  </header>
+
+  <main>
+    <section id="our-days" class="section counter-section">
+      <p class="section-kicker">CHAPTER 01 · OUR DAYS</p>
+      <h2>不知不觉，已经一起走过</h2>
+      <div class="day-card">
+        <div class="mini-heart">♡</div>
+        <div class="day-number" id="daysTogether">---</div>
+        <div class="day-label">天</div>
+        <p>从相遇的那天开始，平凡的日子也有了新的意义。</p>
+        <div class="counter-foot">SINCE <span id="startDateLabel">2026.06.29</span></div>
+      </div>
+      <p class="tiny-note">每一天都在继续，故事也还没写完。</p>
+    </section>
+
+    <section class="section letter-section">
+      <p class="section-kicker">CHAPTER 02 · A LITTLE LETTER</p>
+      <h2>有一封信，想亲手交给你</h2>
+      <p class="section-intro">点一下信封，打开藏在里面的话。</p>
+      <button class="envelope-wrap" id="openLetter" aria-label="打开情书">
+        <div class="envelope" id="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter-paper"><span class="letter-heart">♡</span><strong>给最特别的你</strong><small>有些话，想慢慢说给你听。</small></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-seal">♡</div>
+        </div>
+        <span class="tap-hint">点击打开 ♡</span>
+      </button>
+      <div class="letter-message" id="letterMessage" hidden>
+        <div class="letter-inner">
+          <p class="letter-to">亲爱的：</p>
+          <p>谢谢你走进我的生活，让普通的日子多了一份期待。</p>
+          <p>我不一定总能把心里的话说得很好，也不一定每次都能做到完美，但我希望你知道：我很珍惜我们在一起的时光。</p>
+          <p>以后我们还会有很多个第一次，很多次见面、拥抱、散步和分享日常。希望开心的时候你第一个想到我，难过的时候也愿意告诉我。</p>
+          <p>我们的故事还很长，不用着急，只要认真地一起走下去就好。</p>
+          <p class="letter-sign">一直在努力爱你的我 ♡</p>
+          <button class="text-button" id="closeLetter">把信收起来</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <p class="section-kicker">CHAPTER 03 · LITTLE MEMORIES</p>
+      <h2>把喜欢的瞬间收藏起来</h2>
+      <p class="section-intro">这里留给你们的照片。把自己的照片放进 images 文件夹，就能替换下面的示例卡片。</p>
+      <div class="gallery">
+        <figure class="photo-card photo-tall">
+          <img src="images/photo1.jpg" alt="我们的照片一" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="photo-placeholder"><span>♡</span><b>放一张最喜欢的合照</b><small>images/photo1.jpg</small></div>
+          <figcaption><span>01</span> 我想收藏的瞬间</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/photo2.jpg" alt="我们的照片二" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="photo-placeholder"><span>✦</span><b>一次开心的约会</b><small>images/photo2.jpg</small></div>
+          <figcaption><span>02</span> 和你一起的日常</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/photo3.jpg" alt="我们的照片三" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="photo-placeholder"><span>☁</span><b>一张可爱的你</b><small>images/photo3.jpg</small></div>
+          <figcaption><span>03</span> 我眼里的你</figcaption>
+        </figure>
+      </div>
+      <p class="privacy-note">小提示：照片只会在你上传并发布网站后显示。请选你们都愿意公开给对方看的照片。</p>
+    </section>
+
+    <section class="surprise-section">
+      <div class="surprise-sparkle">✦</div>
+      <p class="section-kicker">ONE MORE THING</p>
+      <h2>今天也想让你开心一点</h2>
+      <p>如果你看到这里，就收下一个小小的惊喜吧。</p>
+      <button class="pill-button surprise-button" id="surpriseBtn">点我收下惊喜 ♡</button>
+      <div id="surpriseMessage" class="surprise-message" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-heart">♡</div>
+    <p>Made with love, just for us.</p>
+    <small>愿往后的日子，仍然有你。</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
