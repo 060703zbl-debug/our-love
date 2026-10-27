@@ -22,3 +22,24 @@ function updateLoveDays() {
 }
 
 updateLoveDays();
+// 情书打开和收起
+document.addEventListener("DOMContentLoaded", function () {
+  const openBtn = document.getElementById("openLetter");
+  const closeBtn = document.getElementById("closeLetter");
+  const message = document.getElementById("letterMessage");
+  const envelope = document.getElementById("envelope");
+
+  if (openBtn && message) {
+    openBtn.addEventListener("click", function () {
+      message.hidden = false;
+      if (envelope) envelope.classList.add("opened");
+    });
+  }
+
+  if (closeBtn && message) {
+    closeBtn.addEventListener("click", function () {
+      message.hidden = true;
+      if (envelope) envelope.classList.remove("opened");
+    });
+  }
+});
